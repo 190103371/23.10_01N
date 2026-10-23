@@ -1,0 +1,22 @@
+Task 8: Compute Geometry - CPU Matrix Tiling
+Matrix size: 1024 x 1024
+Repeats per implementation: 3
+
+Running naive implementation...
+Running tiled 16x16 implementation...
+Running tiled 64x64 implementation...
+
+Results (median of 3 runs)
+Implementation | Time (ms) | Speedup | Checksum
+Naive          | 825.555 | 1.000x | 263019968.448
+Tiled 16x16    | 842.243 | 0.980x | 263019968.448
+Tiled 64x64    | 684.556 | 1.206x | 263019968.448
+
+Correctness verification
+Max difference (naive vs 16x16): 0.000
+Max difference (naive vs 64x64): 0.000
+
+Interpretation
+- Tiling improves data reuse by processing matrix sub-blocks.
+- The best tile size depends on CPU cache, compiler, and hardware.
+- Compare measured runtimes; do not assume a larger tile is always faster.
