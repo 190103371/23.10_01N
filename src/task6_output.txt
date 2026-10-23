@@ -1,0 +1,20 @@
+Task 6: Synchronization Cost & Data Loss
+Threads: 4
+Increments per thread: 2000000
+Expected final value: 8000000
+
+Version A: Unsynchronized counter
+Actual final value: 3633823
+Updates lost (estimated): 4366177
+Lost percentage (estimated): 54.577%
+Wall-clock time: 23.769 ms
+
+Version B: Atomic counter
+Actual final value: 8000000
+Updates lost: 0
+Wall-clock time: 150.172 ms
+
+Synchronization timing comparison
+Atomic / unsynchronized time ratio: 6.318x
+
+Note: the unsynchronized version has a C++ data race and therefore undefined behavior. Its lost-update count is an illustrative observation, not a portable guarantee. The atomic version is thread-safe.
