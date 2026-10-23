@@ -1,0 +1,23 @@
+Task 7: Memory Bandwidth Saturation
+Elements: 30000000
+Array size: 228.882 MiB per array
+Detected logical CPUs: 12
+
+Kernel 1: Memory-bound vector copy
+Threads | Median ms | Speedup | Efficiency | GB/s
+      1 |    29.100 |   1.000 |    100.000% |  16.495
+      2 |    22.756 |   1.279 |     63.939% |  21.093
+     12 |    25.567 |   1.138 |      9.485% |  18.774
+Sample checksum: 3000.000
+
+Kernel 2: Compute-bound trigonometric function
+Threads | Median ms | Speedup | Efficiency
+      1 |   322.811 |   1.000 |    100.000%
+      2 |   215.313 |   1.499 |     74.963%
+     12 |    66.882 |   4.827 |     40.221%
+Sample checksum: 5990.080
+
+Interpretation:
+- Copy reads and writes large arrays, so memory bandwidth can limit scaling.
+- Trigonometric operations require more computation per element.
+- Use the measured speedup and efficiency to identify which kernel stops scaling first.
