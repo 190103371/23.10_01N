@@ -1,0 +1,44 @@
+Task 5: The Overhead Crossover Point
+Available logical threads: 12
+Repeats per measurement: 5
+Operation: y[i] = a * x[i] + b
+
+N = 100
+  Serial median:   0.0003 ms
+  Parallel median: 1.7309 ms
+  Speedup:         0.0002x
+  Faster:          SERIAL
+
+N = 1000
+  Serial median:   0.0009 ms
+  Parallel median: 1.4815 ms
+  Speedup:         0.0006x
+  Faster:          SERIAL
+
+N = 10000
+  Serial median:   0.0061 ms
+  Parallel median: 1.1915 ms
+  Speedup:         0.0051x
+  Faster:          SERIAL
+
+N = 100000
+  Serial median:   0.0601 ms
+  Parallel median: 0.8189 ms
+  Speedup:         0.0734x
+  Faster:          SERIAL
+
+N = 1000000
+  Serial median:   0.8480 ms
+  Parallel median: 1.0703 ms
+  Speedup:         0.7923x
+  Faster:          SERIAL
+
+N = 10000000
+  Serial median:   12.5378 ms
+  Parallel median: 5.5996 ms
+  Speedup:         2.2391x
+  Faster:          PARALLEL
+
+=== Crossover analysis ===
+Observed crossover between N = 1000000 and N = 10000000.
+Note: crossover is determined from median timings at the tested sizes; it is not an exact threshold for every N.
