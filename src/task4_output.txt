@@ -1,0 +1,23 @@
+Task 4: Work Stealing & Scheduling Under Skew
+Tasks: 1000, workers: 4
+
+Strategy A: Static equal blocks
+Total execution time: 2031.880 ms
+Thread completion delta: 156.977 ms
+Worker completion times (from start): 1874.670, 2031.575, 1874.620, 2031.597 ms
+Checksum: 500500
+
+Strategy B: Dynamic scheduling, chunk size 1
+Total execution time: 2102.675 ms
+Thread completion delta: 15.640 ms
+Worker completion times (from start): 2085.984, 2101.619, 2086.014, 2085.979 ms
+Checksum: 500500
+
+Strategy C: Dynamic scheduling, chunk size 5
+Total execution time: 2141.178 ms
+Thread completion delta: 32.293 ms
+Worker completion times (from start): 2108.379, 2125.331, 2140.672, 2124.709 ms
+Checksum: 500500
+
+Expected checksum: 500500
+All checksums match: YES
