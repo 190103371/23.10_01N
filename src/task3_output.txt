@@ -1,0 +1,17 @@
+Task 3: False Sharing Experiment
+Physical CPU cores: 8
+Iterations per thread: 50000000
+
+Experiment A: Unpadded counters
+Time (ms): 135.776
+Total count: 400000000
+
+Experiment B: Cache-line-padded counters
+Time (ms): 26.743
+Total count: 400000000
+
+Unpadded / padded time ratio: 5.077x
+
+Expected count per experiment: 400000000
+
+Note: a ratio above 1 means the unpadded version was slower in this run. Results depend on CPU architecture and system load.
